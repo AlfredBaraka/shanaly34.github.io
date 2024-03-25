@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alfred Baraka Rugoye's Data Science Portfolio showcasing projects, skills, and education.">
+    <meta name="keywords" content="data science, portfolio, projects, skills, education, Python, Django, GitHub, Jupyter Notebook, Matplotlib, NumPy, Pandas, Seaborn, Scikit-learn, MySQL">
+    <title>Imputing Missing Class Values Using K-Nearest Neighbors (KNN)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+</head>
+<body>
+    <header>
+        <h1 class="center">Imputing Missing Class Values Using K-Nearest Neighbors (KNN)</h1>
+        <p>In this tutorial we gonna deal with how to fill missing categorical value in a dataset using KNNeighbor. Where we gonna train model and model gonna fill the missing values</p> 
+        <p>Upload Date: <span class="solution-date">25 March 2024</span></p>
+        <a href="https://shanaly.online" target="_blank" class="github-button">View My Portifolio</a>
+    </header>
+    <a href="https://github.com/Shanaly34/Imputing-Missing-Class-Values-Use-KNNeighbor" target="_blank" class="github-button">View On Github</a>
+    <section class="solution-details">
+        <h2>Tutorial</h2>
+
+        <p class="solution-description">In this tutorial, we'll learn how to impute missing class values using the K-Nearest Neighbors algorithm.</p>
+
+        <p class="solution-description">First, let's load the necessary Python libraries:</p>
+        <div class="code-snippet">
+            <pre><code>
+import numpy as np
+from sklearn.neighbors import KNeighborsClassifier
+            </code></pre>
+        </div>
+
+        <p class="solution-description">Next, we'll create a learning dataset with some missing values:</p>
+        <div class="code-snippet">
+            <pre><code>
+X = np.array([[0, 2.10, 1.45],
+              [1, 1.18, 1.33],
+              [0, 1.22, 1.27],
+              [1, -0.21, -1.19]])
+
+X_with_nan = np.array([[np.nan, 0.87, 1.31],
+                        [np.nan, -0.67, -0.22]])
+            </code></pre>
+        </div>
+
+        <p class="solution-description">Now, we'll train a K-Nearest Neighbors model to impute the missing values:</p>
+        <div class="code-snippet">
+            <pre><code>
+clf = KNeighborsClassifier(3, weights="distance")
+trained_model = clf.fit(X[:,1:], X[:,0])
+
+imputed_values = trained_model.predict(X_with_nan[:,1:])
+X_with_imputed = np.hstack((imputed_values.reshape(-1, 1), X_with_nan[:, 1:]))
+            </code></pre>
+        </div>
+
+        <p class="solution-description">Finally, let's combine the imputed values with the original dataset:</p>
+        <div class="code-snippet">
+            <pre><code>
+full_features = np.vstack((X, X_with_imputed)) <br>
+# Print full dataset with imputed values
+print("Full dataset with imputed values:\n", full_features)
+            </code></pre>
+        </div>
+        <div class="ttable">
+            <table>
+                <caption>Full dataset with imputed values</caption>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>2.10</td>
+                        <td>1.45</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1.18</td>
+                        <td>1.33</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1.22</td>
+                        <td>1.27</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>-0.21</td>
+                        <td>-1.19</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0.87</td>
+                        <td>1.31</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>-0.67</td>
+                        <td>-0.22</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="solution-description">
+        Evaluate accuracy of imputation (if true labels are available) <br>
+        True labels for X_with_nan: [0, 1]</p>
+
+        <div class="code-snippet">
+            <pre><code>
+                true_labels = np.array([0, 1])
+                imputed_accuracy = accuracy_score(true_labels, imputed_values)
+                print("\nImputed Accuracy:", imputed_accuracy)
+            </code></pre>
+        </div>
+        <h3 class="center">Imputed Accuracy: 1.0</h3>
+
+    </section>
+    <div class="tutorial-section">
+        <h2>Explanation of KNN Algorithm</h2>
+        <p>
+            The K-Nearest Neighbors (KNN) algorithm is a supervised learning algorithm used for classification and regression tasks.
+            In KNN, an object is classified by a majority vote of its neighbors, with the object being assigned to the class most common among its k nearest neighbors (where k is a hyperparameter).
+            KNN is a simple, non-parametric, lazy learning algorithm that makes predictions based on the similarity of new data points to existing data points in the training dataset.
+        </p>
+    </div>
+
+    <div class="tutorial-section">
+        <h2>Data Visualization</h2>
+        <p>
+            Data visualization techniques such as scatter plots or histograms are used to explore the distribution of data points in a dataset.
+            These visualizations provide insights into the relationships between variables and can help identify patterns or trends in the data.
+        </p>
+    </div>
+
+    <div class="tutorial-section">
+        <h2>Parameter Tuning</h2>
+        <p>
+            Parameter tuning involves selecting the optimal values for the hyperparameters of a machine learning algorithm.
+            In the case of the KNN algorithm, the 'k' parameter represents the number of nearest neighbors to consider when making predictions.
+            Choosing the appropriate value of 'k' is essential for achieving optimal performance and avoiding issues such as overfitting or underfitting.
+        </p>
+    </div>
+
+    <div class="tutorial-section">
+        <h2>Evaluation Metrics</h2>
+        <p>
+            Evaluation metrics are used to assess the performance of a machine learning model.
+            In the context of imputation methods, classification metrics such as accuracy, precision, recall, or F1-score can be used to measure the quality of imputed values compared to true labels (if available).
+        </p>
+    </div>
+
+    <div class="tutorial-section">
+        <h2>Handling Categorical Features</h2>
+        <p>
+            Categorical features, such as gender or region, are variables that take on discrete values representing categories or groups.
+            Before applying the KNN algorithm to a dataset with categorical features, these features need to be properly encoded into numerical format.
+            Techniques such as one-hot encoding or label encoding can be used to convert categorical variables into a format that can be processed by the algorithm.
+        </p>
+    </div>
+
+    <div class="tutorial-section">
+        <h2>Comparison with Other Imputation Methods</h2>
+        <p>
+            KNN imputation is just one of several techniques used to fill missing values in a dataset.
+            Other common imputation methods include mean imputation, median imputation, mode imputation, or interpolation.
+            Each method has its advantages and disadvantages, and the choice of imputation technique depends on factors such as data distribution, missing data mechanism, and the nature of the problem.
+        </p>
+    </div>
+
+    <div class="tutorial-section">
+        <h2>Real-World Applications</h2>
+        <p>
+            Imputing missing values using KNN can have various real-world applications, such as medical diagnosis, customer segmentation, fraud detection, or recommender systems.
+            For example, in medical diagnosis, missing clinical data for patients can be imputed using similar patients' data, helping improve the accuracy of disease prediction models.
+        </p>
+    </div>
+
+    <div class="tutorial-section">
+        <h2>Further Reading</h2>
+        <p>
+            For readers who want to explore the topic further, here are some additional resources:
+            <ul>
+                <li>Scikit-learn documentation on KNeighborsClassifier: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html" target="_blank">https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html</a></li>
+                <li>Machine	Learning with Python Cookbook By Chris	Albon(2018), Published	by	O’Reilly	Media </li>
+                </ul>
+            </p>
+        </div>
+    
+        <div class="tutorial-section">
+            <h2>End of Tutorial</h2>
+            <p>
+                This concludes the tutorial on the K-Nearest Neighbors (KNN) algorithm and its application in imputing missing values.
+                Feel free to experiment with the provided code and explore further resources to deepen your understanding of this topic.
+            </p>
+        </div>
+        <img class="logo" src="images/black.png" alt="Logo">
+
+    <footer>
+        <p>&copy; 2024 Alfred Baraka Rugoye - Imputing Missing Class Values Using K-Nearest Neighbors</p>
+    </footer>
+
+</body>
+
+</html>
