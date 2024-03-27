@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alfred Baraka Rugoye's Data Science Portfolio showcasing projects, skills, and education.">
+    <meta name="keywords" content="data science, portfolio, projects, skills, education, Python, Django, GitHub, Jupyter Notebook, Matplotlib, NumPy, Pandas, Seaborn, Scikit-learn, MySQL">
+    <title>Mastering File Handling in Python</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+</head>
+<body>
+    <header>
+        <h1 class="center">Mastering File Handling in Python</h1>
+        <p>Welcome to the comprehensive guide on mastering file handling in Python! Whether you're a beginner looking to understand the basics or an experienced developer seeking to deepen your knowledge, this tutorial is designed to equip you with everything you need to know about working with files in Python.</p> 
+        <p>Upload Date: <span class="solution-date">27 March 2024</span></p>
+        <a href="https://shanaly.online" target="_blank" class="github-button">View My Portifolio</a>
+    </header>
+    <a href="https://github.com/Shanaly34/file_handling" target="_blank" class="github-button">View On Github</a>
+
+    <section>
+        <p>Python provides powerful tools for working with files. Let's explore the essentials of file handling.</p>
+        <h2>Importance of File Handling</h2>
+        <p>File handling is crucial for reading and writing data to files, which is essential for data storage, retrieval, and manipulation in various applications.</p>
+        <h2>Disadvantages of File Handling</h2>
+        <p>While file handling is useful, it has some limitations, such as:</p>
+        <ul>
+            <li>Limited scalability for large datasets</li>
+            <li>No built-in support for advanced data structures</li>
+            <li>Potential security risks, such as file injection attacks</li>
+        </ul>
+        <h2>Precautions</h2>
+        <p>When working with files, it's essential to:</p>
+        <ul>
+            <li>Handle exceptions gracefully to avoid crashing your program</li>
+            <li>Close files properly after use to prevent memory leaks</li>
+            <li>Sanitize input to mitigate security risks</li>
+        </ul>
+       
+        <h2>Python Code for File Handling</h2>
+    <p>Python provides built-in functions to perform various operations on files, including reading, writing, and appending data.</p>
+    <h2 class="solution-description">1. Writing to a File</h2>
+    <pre><code>
+        # Open the file in write mode
+        with open("my_file.txt", "w") as file:
+            # Write three lines of text to the file
+            file.write("Hello, world!\n")
+            file.write("This is line 2.\n")
+            file.write("The answer is 42.\n")
+    </code></pre>
+    <h2 class="solution-description">2. Reading from a File</h2>
+    <pre><code>
+        # Open the file in read mode
+        with open("my_file.txt", "r") as file:
+            # Read the contents of the file
+            content = file.read()
+            # Display the contents on the console
+            print(content)
+    </code></pre>
+    <h2 class="solution-description">3. Appending to a File</h2>
+    <pre><code>
+        # Open the file in append mode
+        with open("my_file.txt", "a") as file:
+            # Append three additional lines of text to the file
+            file.write("This is line 4.\n")
+            file.write("Appending more text.\n")
+            file.write("Last line.\n")
+    </code></pre>
+    <p class="solution-description">#NB: All the time make sure you have that txt file(my_file.txt) when you run code</p>
+
+    
+
+
+
+        <img class="logo" src="images/black.png" alt="Logo">
+
+    <footer>
+        <p>&copy; 2024 Alfred Baraka Rugoye - Imputing Missing Class Values Using K-Nearest Neighbors</p>
+    </footer>
+
+</body>
+
+</html>
