@@ -1,87 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Alfred Baraka Rugoye's Data Science Portfolio showcasing projects, skills, and education.">
     <meta name="keywords" content="data science, portfolio, projects, skills, education, Python, Django, GitHub, Jupyter Notebook, Matplotlib, NumPy, Pandas, Seaborn, Scikit-learn, MySQL">
     
-    <link media="screen" rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <title>Alfred Baraka Rugoye - Data Science Portfolio</title>
-    
+    <style>
+        .project-image {
+            width: 100%;
+            max-width: 400px;
+            height: 200px; /* Adjust this value as needed */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Alfred Baraka Rugoye</h1>
-        <p>Data Science Enthusiast</p>
-        <p><a href="https://github.com/Shanaly34" target="_blank" rel="noopener noreferrer">Github</a> | <a href="tel:+255626891481">+255626 891 481</a></p> 
+<body class="bg-light text-dark">
+
+
+    <!-- header -->
+
+    <header class="text-center my-4">
+        <h1 class="display-4">Alfred Baraka Rugoye</h1>
+        <p class="lead">Data Science Enthusiast</p>
+        <p><a href="https://github.com/Shanaly34" target="_blank" rel="noopener noreferrer" class="text-decoration-none">GitHub</a> | <a href="tel:+255626891481" class="text-decoration-none">+255626 891 481</a></p> 
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="tutorials/index.html">Tutorials</a></li>
-        </ul>
+
+    <!-- navbar -->
+    <nav class="nav justify-content-center mb-4">
+        <a class="nav-link" href="#about">About Me</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link" href="tutorials/index.html">Tutorials</a>
     </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my data science portfolio. Alfred Baraka Rugoye is a student at the National Institute of Transport located in <span class="location">Mabibo, Ubungo Dar es Salaam, Tanzania.</span> I am passionate about leveraging data to derive meaningful insights and solve real-world problems. My journey started with web development and gradually shifted to data science. It began with learning Python and later evolved into a deeper understanding of data, from analysis to engineering big data.</p>
-        <div class="me"><img src="image/me.jpg" alt="Photograph of Alfred Baraka Rugoye"></div>
+    <section id="about" class="container mb-5">
+        <!-- about me -->
+        <h2 class="h3">About Me</h2>
+        <p>Welcome to my data science portfolio. Alfred Baraka Rugoye is a student at the National Institute of Transport located in <span class="fw-bold">Mabibo, Ubungo Dar es Salaam, Tanzania.</span> I am passionate about leveraging data to derive meaningful insights and solve real-world problems. My journey started with web development and gradually shifted to data science. It began with learning Python and later evolved into a deeper understanding of data, from analysis to engineering big data.</p>
+        <div class="text-center">
+
+
+            <!-- profile image -->
+            <img src="image/me.jpg" alt="Photograph of Alfred Baraka Rugoye" class="img-fluid  mt-3">
+        </div>
     </section>
 
     <!-- Education -->
-    <section id="education">
-        <h2>Education</h2>
+    <section id="education" class="container mb-5">
+        <h2 class="h3">Education</h2>
         <p>Bachelor Degree in Computer Science<br>
         National Institute of Transport, Mabibo, Dar es Salaam, Tanzania<br>
         Expected Graduation: 2025</p>
     </section>
 
     <!-- Skills -->
-    <section id="skills">
-        <h2>Skills</h2>
+    <section id="skills" class="container mb-5">
+        <h2 class="h3">Skills</h2>
         <p>Django, GitHub, Jupyter Notebook, Matplotlib, NumPy, Pandas, Seaborn, Scikit-learn, Database (MySQL)</p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects1">
-            <h1>PUBLIC SCHOOL PROJECT</h1>
-            <img src="image/project1.PNG" alt="Project 1 Screenshot"><br>
-            <a href="projects/public_school.html"  rel="noopener noreferrer">SEE PROJECT DETAILS</a>
+    <section id="projects" class="container mb-5">
+        <h2 class="h3">Projects</h2>
+        <div class="row">
+            <div class="col-md-6 text-center mb-4">
+                <h3 class="h4">PUBLIC SCHOOL PROJECT</h3>
+                <img src="image/project1.PNG" alt="Project 1 Screenshot" class="project-image mb-2">
+                <br>
+                <a href="projects/public_school.html" class="btn btn-outline-primary w-100" rel="noopener noreferrer">SEE PROJECT DETAILS</a>
+            </div>
+            <div class="col-md-6 text-center mb-4">
+                <h3 class="h4">NETFLIX MOVIE PROJECT</h3>
+                <img src="image/project2.png" alt="Project 2 Screenshot" class="project-image mb-2">
+                <br>
+                <a href="projects/netflix_project.html" class="btn btn-outline-primary w-100" rel="noopener noreferrer">SEE PROJECT DETAILS</a>
+            </div>
         </div>
-        <div class="projects">
-            <h1>NETFLIX MOVIE PROJECT</h1>
-            <img src="image/project2.png" alt="Project 2 Screenshot"><br>
-            <a href="projects/netflix_project.html"  rel="noopener noreferrer">SEE PROJECTS DETAIL</a>
-        </div>
-        
+
+       
+    
+
+    <section id="contact" class="container mb-5">
+        <h2 class="h3">Contact</h2>
+        <p><a href="mailto:alfredbaraka287@gmail.com" class="text-decoration-none">alfredbaraka287@gmail.com</a> | <a href="tel:+255626891481" class="text-decoration-none">+255626 891 481</a></p>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p><a href="mailto:alfredbaraka287@gmail.com">alfredbaraka287@gmail.com</a> | <a href="tel:+255626891481">+255626 891 481</a></p>
-    </section>
-
-   
-
-    <!-- Inside the <footer> section -->
-    <footer>
-        <p>&copy; 2024 Alfred Baraka Rugoye - Data Science Portfolio</p><br>
-        <p><a href="sitemap.xml">sitemap</a></p>
+    <footer class="text-center mt-4 py-4 bg-dark text-white">
+        <p>&copy; 2024 Alfred Baraka Rugoye - Data Science Portfolio</p>
+        <p><a href="sitemap.xml" class="text-white">Sitemap</a></p>
     </footer>
 
-    <script src="script/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-    <script src="script/manual.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

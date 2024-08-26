@@ -13,42 +13,39 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
     <link rel="manifest" href="../favicon/site.webmanifest">
-    
 </head>
 
 <body>
 
-    <header>
-        <h1 class="center">Netflix Movie Duration Analysis</h1>
-        <p>The aim of this Project is to process data and find the truth if Netflix movie is become shorter over times</p>
-        <p>Solution Date: <span class="solution-date">23 March 2024</span></p>
-        <a  href="https://shanaly.online" target="_blank" class="github-button">View My Portifolio</a>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Netflix Movie Duration Analysis</h1>
+        <p>The aim of this project is to process data and find out if Netflix movies have become shorter over time.</p>
+        <p>Solution Date: <span class="badge bg-secondary">23 March 2024</span></p>
+        <a href="https://shanaly.online" target="_blank" class="btn btn-light">View My Portfolio</a>
     </header>
-    <a href="https://github.com/Shanaly34/netflix_project" target="_blank" class="github-button">View on GitHub</a>
 
-    <section class="solution-details">
+    
+
+    <section class="container my-5">
+        <a href="https://github.com/Shanaly34/netflix_project" target="_blank" class="btn btn-secondary mb-3">View on GitHub</a>
         <h2>Solution</h2>
 
-        <p class="solution-description">In this tutorial, we'll analyze the duration of movies available on Netflix and visualize the relationship between movie duration and release year, while also exploring the distribution of genres.</p>
+        <p>In this tutorial, we'll analyze the duration of movies available on Netflix and visualize the relationship between movie duration and release year, while also exploring the distribution of genres.</p>
 
-        <p class="solution-description">Let's start by importing the necessary Python libraries: pandas for data manipulation and matplotlib for data visualization.</p>
-        <div class="code-snippet">
-            <pre><code>
-import pandas as pd
-import matplotlib.pyplot as plt
-            </code></pre>
+        <p>Let's start by importing the necessary Python libraries: pandas for data manipulation and matplotlib for data visualization.</p>
+        <div class="bg-light p-3 rounded mb-4">
+            <pre><code>import pandas as pd
+import matplotlib.pyplot as plt</code></pre>
         </div>
 
-        <p class="solution-description">Next, let's load the Netflix dataset and create a DataFrame.</p>
-        <div class="code-snippet">
-            <pre><code>
-netflix_df = pd.read_csv("netflix_data.csv")
-netflix_df.head()
-            </code></pre>
+        <p>Next, let's load the Netflix dataset and create a DataFrame.</p>
+        <div class="bg-light p-3 rounded mb-4">
+            <pre><code>netflix_df = pd.read_csv("netflix_data.csv")
+netflix_df.head()</code></pre>
         </div>
 
-        <div class="ttable">
-            <table>
+        <div class="table-responsive mb-4">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>Show ID</th>
@@ -134,19 +131,14 @@ netflix_df.head()
             </table>
         </div>
 
-        <p class="solution-description">Now, we'll filter the DataFrame to include only movies.</p>
-        <div class="code-snippet">
-            <pre><code>
-netflix_subset = netflix_df[netflix_df["type"] == "Movie"]
-            </code></pre>
+        <p>Now, we'll filter the DataFrame to include only movies.</p>
+        <div class="bg-light p-3 rounded mb-4">
+            <pre><code>netflix_subset = netflix_df[netflix_df["type"] == "Movie"]</code></pre>
         </div>
 
-        <!-- Add more steps as needed -->
-
-        <p class="solution-description">Finally, let's create a scatter plot to visualize the relationship between movie duration and release year, with colors representing different genres.</p>
-        <div class="code-snippet">
-            <pre><code>
-# Define an empty list
+        <p>Finally, let's create a scatter plot to visualize the relationship between movie duration and release year, with colors representing different genres.</p>
+        <div class="bg-light p-3 rounded mb-4">
+            <pre><code># Define an empty list
 colors = []
 
 # Iterate over rows of netflix_movies
@@ -169,18 +161,14 @@ plt.xlabel("Release year")
 plt.ylabel("Duration (min)")
 
 # Show the plot
-plt.show()
-            </code></pre>
+plt.show()</code></pre>
         </div>
-        <img class="logo" src="images/project1.png" alt="Logo">
+        <img class="img-fluid" src="images/project1.png" alt="Project Screenshot">
     </section>
-    <img class="logo" src="images/black.png" alt="Logo">
 
-    <footer>
+    <footer class="bg-light text-center py-3">
         <p>&copy; 2024 Alfred Baraka Rugoye - Netflix Movie Duration Analysis Tutorial</p>
-        <a href="https://github.com/Shanaly34/netflix_project" target="_blank" class="github-button">View on GitHub</a>
+        <a href="https://github.com/Shanaly34/netflix_project" target="_blank" class="btn btn-outline-dark">View on GitHub</a>
     </footer>
 
-</body>
-
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pj4wnN7h+MhbOg6irYp2AA0HjlA2z9P9
