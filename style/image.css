@@ -1,0 +1,6 @@
+.project-image {
+    width: 100%;
+    max-width: 400px;
+    height: 200px; /* Adjust this value as needed */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
