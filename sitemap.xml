@@ -9,32 +9,37 @@
 
 <url>
   <loc>https://shanaly.online/</loc>
-  <lastmod>2024-03-27T07:54:44+00:00</lastmod>
+  <lastmod>2024-08-27T07:23:37+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://shanaly.online/projects/index.html</loc>
+  <lastmod>2024-08-27T07:23:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://shanaly.online/tutorials/index.html</loc>
-  <lastmod>2024-03-27T07:54:44+00:00</lastmod>
+  <lastmod>2024-08-27T07:23:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://shanaly.online/projects/public_school.html</loc>
-  <lastmod>2024-03-27T07:54:44+00:00</lastmod>
+  <lastmod>2024-08-27T07:23:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://shanaly.online/projects/netflix_project.html</loc>
-  <lastmod>2024-03-27T07:54:44+00:00</lastmod>
+  <lastmod>2024-08-27T07:23:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://shanaly.online/tutorials/tutorial_one.html</loc>
-  <lastmod>2024-03-27T07:54:44+00:00</lastmod>
+  <lastmod>2024-08-27T07:23:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://shanaly.online/tutorials/tutorial_2.html</loc>
-  <lastmod>2024-03-27T07:54:44+00:00</lastmod>
+  <lastmod>2024-08-27T07:23:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
